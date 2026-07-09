@@ -1,0 +1,85 @@
+# 🚀 Zero-Cost Automated DevSecOps Pipeline
+
+## 🌍 نظرة عامة على المشروع
+
+[English Version Below]
+
+هذا المشروع عبارة عن بيئة عمل متكاملة ومؤتمتة بالكامل لنشر تطبيقات الويب.
+يعتمد النظام على بناء خط أنابيب متكامل:
+`CI/CD Pipeline`
+
+الميزة الأساسية هي العمل **بدون تكلفة بنية تحتية سحابية**:
+`Zero-Cost Infrastructure`
+
+يعتمد المشروع على تحويل الأجهزة المحلية أو الخوادم الخاصة إلى محركات تشغيل:
+`Self-Hosted Runners`
+
+محركات التشغيل مرتبطة مباشرة بـ:
+`GitHub Actions`
+مما يوفر آلاف الدولارات التي تُنفق على الخدمات السحابية المدفوعة.
+
+التطبيق المستخدم هو تطبيق ويب مبني بلغة:
+`Python Flask`
+
+التطبيق متصل بقاعدة بيانات من نوع:
+`PostgreSQL`
+
+يتم إدارة النظام بالكامل وبشكل معزول عبر حاويات:
+`Docker & Docker Compose`
+
+---
+
+### 🎯 الهدف والفوائد التجارية
+
+* **💰 توفير التكاليف بنسبة 100%**
+  الاستغناء الكامل عن خدمات الحوسبة المدفوعة والاعتماد على الموارد المحلية.
+
+* **⚡ الأتمتة الكاملة**
+  بمجرد قيام المطور برفع الكود باستخدام الأمر: `git push`
+  يقوم النظام تلقائياً باختبار الكود، بناء الحاويات، وتحديث الخدمة على السيرفر بدون تدخل بشري.
+
+* **🛡️ بيئة إنتاجية جاهزة**
+  فصل قاعدة البيانات عن التطبيق لضمان استقرار وحفظ البيانات وحمايتها بشكل احترافي.
+
+---
+
+### 🏗️ الهيكل التقني للمشروع (Tech Stack)
+
+* **تطبيق الويب:** `Python Flask`
+* **قاعدة البيانات:** `PostgreSQL`
+* **إدارة الحاويات:** `Docker` & `Docker Compose`
+* **الأتمتة والـ CI/CD:** `GitHub Actions`
+---
+
+## 🌍 Project Overview (English)
+A production-ready, fully automated **Zero-Cost DevSecOps Pipeline** designed to build, test, and deploy web applications without relying on expensive cloud-managed CI/CD infrastructure. By leveraging **GitHub Actions Self-Hosted Runners**, this project demonstrates how businesses and developers can save infrastructure costs by utilizing local compute resources or private servers securely.
+
+The architecture consists of a **Python (Flask)** web application seamlessly integrated with a **PostgreSQL** database, containerized using **Docker** and managed via **Docker Compose**.
+
+### 🎯 Key Business & Technical Benefits:
+* **100% Infrastructure Cost Reduction:** Eliminates the need for paid CI/CD execution environments.
+* **Fully Automated Workflows:** Triggers automatic unit testing, Docker image building, and production deployment upon every `git push`.
+* **Isolated Environment:** Implements microservices architecture by separating the application layer from the database layer for enhanced security and persistence.
+
+### 🏗️ Tech Stack:
+* **Backend Framework:** Python Flask
+* **Database:** PostgreSQL
+* **Containerization & Orchestration:** Docker & Docker Compose
+* **CI/CD Platform:** GitHub Actions (Self-Hosted Runner)
+
+---
+
+## 🛠️ كيفية التشغيل محلياً / How to Run Locally
+
+### 1. المتطلبات / Prerequisites:
+* Docker & Docker Compose installed.
+* Git installed.
+
+### 2. التشغيل / Deployment:
+```bash
+# Clone the repository
+git clone [https://github.com/mwahibelhag/zero-cost-devops-pipeline.git](https://github.com/mwahibelhag/zero-cost-devops-pipeline.git)
+cd zero-cost-devops-pipeline
+
+# Run the system with Docker Compose
+docker-compose up -d --build  
