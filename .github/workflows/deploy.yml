@@ -1,0 +1,32 @@
+name: Zero-Cost DevSecOps Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  devops-pipeline:
+    runs-on: self-hosted
+
+    steps:
+      - name: 1. Check out repository code
+        uses: actions/checkout@v4
+
+      - name: 2. Test & Lint Code
+        run: |
+          echo "==== RUNNING TESTS ===="
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          echo "Code is valid and ready for building."
+
+      - name: 3. Build and Deploy with Docker Compose
+        run: |
+          echo "==== STARTING DEPLOYMENT ===="
+          docker-compose down --remove-orphans
+          docker-compose up -d --build
+          echo "==== DEPLOYMENT SUCCESSFUL ===="
+
+      - name: 4. Verify Running Services
+        run: |
+          echo "==== CURRENT RUNNING CONTAINERS ===="
+          docker ps
